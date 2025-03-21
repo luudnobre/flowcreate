@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escrita Criativa</title>
+  <link rel="stylesheet" href="escrita.css">
+</head>
+<body>
+  <h1>✍️ Escrita Criativa</h1>
+
+  <textarea id="blocoEscrita" placeholder="Deixe o Espírito conduzir sua escrita..."></textarea>
+  <div class="botoes">
+    <button onclick="salvarTexto()">💾 Salvar</button>
+    <button onclick="limparTexto()">🧹 Limpar</button>
+  </div>
+
+  <div class="progresso-container">
+    <label for="barra">Progresso espiritual:</label>
+    <progress id="barra" max="100" value="0"></progress>
+  </div>
+
+  <div id="mensagens"></div>
+  <a href="index.html" class="voltar">← Voltar</a>
+
+  <script src="escrita.js"></script>
+</body>
+</html>

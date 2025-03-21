@@ -1,0 +1,248 @@
+body {
+    background: linear-gradient(to bottom, #1e0030, #000000);
+    color: #ffffff;
+    font-family: 'Fira Code', monospace;
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #cc99ff;
+    text-shadow: 0 0 15px #8a2be2;
+    margin-bottom: 30px;
+  }
+  
+  .auth-box, textarea, button, input {
+    margin: 15px auto;
+    display: block;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  input, textarea {
+    background: #2c1c3f;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1em;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  button {
+    background: linear-gradient(145deg, #6b29a3, #450a63);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0px 5px 20px rgba(255, 0, 255, 0.3);
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px #d087f7;
+  }
+  
+  #entradas p {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 400px;
+    text-align: left;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  }
+
+  #visual-effect {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  body.light-mode {
+    background: linear-gradient(to top, #ffffff, #e6ddff);
+    color: #000;
+  }
+  
+  body.light-mode input,
+  body.light-mode textarea {
+    background: #f3f3f3;
+    color: #000;
+  }
+  
+  body.light-mode button {
+    background: linear-gradient(145deg, #ddd6ff, #cbb6f7);
+    color: #333;
+  }
+  
+  @media (max-width: 600px) {
+    h1, h2 {
+      font-size: 1.5rem;
+    }
+  
+    .auth-box, textarea, button, input {
+      max-width: 90%;
+    }
+  
+    textarea {
+      height: 100px;
+    }
+  
+    #entradas p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  
+  textarea:focus, input:focus {
+    outline: 2px solid #a29bfe;
+    box-shadow: 0 0 15px #a29bfe;
+  }
+  
+  
+  ol {
+    margin-top: 30px;
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  ol li {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #a6f3ff;
+    text-shadow: 0 0 8px #7fffd4;
+  }
+  #trilha-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .etapa {
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #6a30a4, #512d7e);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+  }
+  
+  .etapa:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #c291ff;
+  }
+  
+  .etapa-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #ffffff22;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 0 10px #8a2be2;
+  }
+  #area-acesso {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .botao-acesso {
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #444, #222);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+  }
+  
+  .botao-acesso:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  }
+  body.light-mode {
+    background: linear-gradient(to bottom, #ffffff, #dcdcdc);
+    color: #222;
+  }
+  
+  .github-emoji-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    background: linear-gradient(145deg, #4b0082, #8a2be2);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .github-emoji-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+  }
+  
+  
+  /* Botões dos módulos continuam como estavam */
+  .botao-modulo {
+    display: block;
+    margin: 15px auto;
+    padding: 15px 30px;
+    background: linear-gradient(145deg, #7f00ff, #6600cc);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+  }
+  
+  .botao-modulo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  
+  
+  
+  .botao-modulo:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.5);
+  }
+  
+  
+  .etapa-box h3 {
+    margin-top: 0;
+    color: #ffddff;
+    text-shadow: 0 0 10px #ffccff;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  

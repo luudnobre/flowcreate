@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sopro Criativo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button id="toggleTheme">☀️ Alternar Modo</button>
+
+  <h1>🌬️ flow create</h1>
+
+  <div class="auth-box">
+    <input type="email" id="email" placeholder="Seu e-mail">
+    <input type="password" id="senha" placeholder="Senha">
+    <button onclick="login()">Entrar</button>
+    <button onclick="register()">Cadastrar</button>
+  </div>
+
+  <div id="botoes-principais">
+    <a href="silencio.html" class="botao-modulo">🕊️ Silêncio guiado</a>
+    <a href="meditacao.html" class="botao-modulo">📖 Meditação bíblica</a>
+    <a href="escrita.html" class="botao-modulo">✍️ Escrita criativa</a>
+    <a href="acao.html" class="botao-modulo">🔥 Ação prática com propósito</a>
+  </div>
+  
+
+  <h2>📓 Diário</h2>
+  <textarea id="entrada" placeholder="Escreva aqui sua reflexão..."></textarea>
+  <button onclick="salvarEntrada()">Salvar Entrada</button>
+  
+  
+  <div id="entradas"></div>
+  <a href="https://github.com/luudnobre" target="_blank" class="github-emoji-btn">
+    💻👩🏼‍💻 Coded by Lud
+  </a>
+ 
+  <ol>
+    
+    
+    <div id="etapas-content">
+      <div id="silencio" class="etapa-box hidden">
+        <h3>Silêncio guiado</h3>
+        <p>Encontre um lugar calmo. Respire fundo. Apenas esteja com Deus em silêncio por 3 minutos.</p>
+      </div>
+      <div id="meditacao" class="etapa-box hidden">
+        <h3>Meditação bíblica</h3>
+        <p>Leia: Salmos 23. Medite em cada palavra. O que o Espírito te revela?</p>
+      </div>
+      <div id="escrita" class="etapa-box hidden">
+        <h3>Escrita criativa</h3>
+        <p>Responda com criatividade: “Como Deus está se movendo dentro de mim hoje?”</p>
+      </div>
+      <div id="acao" class="etapa-box hidden">
+        <h3>Ação com propósito</h3>
+        <p>Pense em uma atitude simples que reflita o que você recebeu hoje — e faça!</p>
+      </div>
+    </div>
+    
+  </ol>
+
+  <script>
+    let usuarioId = localStorage.getItem("usuarioId") || null;
+
+    function register() {
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+      const usuario = { email, senha };
+      localStorage.setItem("usuario", JSON.stringify(usuario));
+      alert("Cadastro feito com sucesso!");
+    }
+
+    function login() {
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+      const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+      if (usuario && usuario.email === email && usuario.senha === senha) {
+        usuarioId = email;
+        localStorage.setItem("usuarioId", usuarioId);
+        alert("Login realizado!");
+        carregarEntradas();
+      } else {
+        alert("Usuário ou senha incorretos");
+      }
+    }
+
+    function salvarEntrada() {
+      const entrada = document.getElementById("entrada").value;
+      if (!entrada.trim()) return;
+      const entradasSalvas = JSON.parse(localStorage.getItem("entradas_" + usuarioId)) || [];
+      entradasSalvas.push(entrada);
+      localStorage.setItem("entradas_" + usuarioId, JSON.stringify(entradasSalvas));
+      document.getElementById("entrada").value = "";
+      carregarEntradas();
+    }
+
+    function carregarEntradas() {
+      if (!usuarioId) return;
+      const entradas = JSON.parse(localStorage.getItem("entradas_" + usuarioId)) || [];
+      const div = document.getElementById("entradas");
+      div.innerHTML = "";
+      entradas.forEach(texto => {
+        const p = document.createElement("p");
+        p.textContent = "🪶 " + texto;
+        div.appendChild(p);
+      });
+    }
+
+    window.onload = carregarEntradas;
+
+    
+  </script>
+</body>
+</html>

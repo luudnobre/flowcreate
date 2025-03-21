@@ -1,0 +1,96 @@
+body {
+    background: linear-gradient(to top, #240046, #000000);
+    color: #fff;
+    font-family: 'Fira Code', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #c084fc;
+  }
+  
+  textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1rem;
+    color: #fff;
+    resize: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(100, 0, 200, 0.3);
+  }
+  
+  .botoes {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #7b2cbf, #5a189a);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #a780ff;
+  }
+  
+  .progresso-container {
+    margin-top: 30px;
+  }
+  
+  progress {
+    width: 300px;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  progress::-webkit-progress-bar {
+    background-color: #444;
+  }
+  
+  progress::-webkit-progress-value {
+    background-color: #a180f0;
+  }
+  
+  #mensagens {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #bbf7d0;
+  }
+  
+  .voltar {
+    margin-top: 30px;
+    text-decoration: none;
+    color: #ccc3ff;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+  }
+  
+  .voltar:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  

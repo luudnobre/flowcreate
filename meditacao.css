@@ -1,0 +1,61 @@
+body {
+    background: linear-gradient(to top, #1f0035, #000);
+    color: #fff;
+    font-family: 'Fira Code', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #b678f0;
+  }
+  
+  #versiculo-box, #pergunta-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 0 15px #44006b;
+  }
+  
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #7e41b9, #4b2b85);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #bb88ff;
+  }
+  
+  .voltar {
+    margin-top: 30px;
+    text-decoration: none;
+    color: #c5baff;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+  }
+  
+  .voltar:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  
